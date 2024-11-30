@@ -13,9 +13,10 @@ html {
   block-size: 100%;
   margin: auto;
   color: #fff;
-  font-family: 'Fira Sans Condensed', sans-serif;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+  display: flex;
 }
 
 h1,
@@ -35,4 +36,257 @@ fieldset {
 ul,
 ol {
   list-style: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.content {
+  width: 1140px;
+  margin: auto;
+  display: flex;
+  align-items: flex-end;
+  gap: 30px;
+}
+
+.result {
+  width: 711px;
+}
+
+.result__video-container {
+  height: 386px;
+  margin-bottom: 16px;
+  display: flex;
+  position: relative;
+}
+
+.result__video {
+  width: 100%;
+  object-fit: fill;
+}
+
+/*------------------------*/
+
+.search-form {
+  display: grid;
+  grid-template-columns: 225px 212px 194px;
+  justify-content: space-between;
+}
+
+.search-form__fieldset-title {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+
+.search-form__fieldset {
+  border: none;
+}
+
+.search-form__label {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.search-form__checkbox-list {
+  display: flex;
+  gap: 15px;
+}
+
+.button {
+  width: 100%;
+  border: 1px white solid;
+  padding: 6px 0;
+  cursor: pointer;
+  background-color: transparent;
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21.6px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+button:active {
+  background-color: rgba(84, 80, 80, 1);
+}
+
+button:hover {
+  text-decoration: underline;
+}
+
+button:focus {
+  outline: 1px white solid;
+}
+
+.search-form__submit-button {
+  align-self: end;
+}
+
+.more-button {
+  align-self: end;
+}
+
+input {
+  margin: 1px;
+  width: 100%;
+  border: none;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  border-radius: 0;
+  padding: 2.5px 0;
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21.6px;
+  color: rgba(255, 255, 255, 0.7);
+  background-color: transparent;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+.search-form__label:has(:focus-visible) {
+  outline: 1px white solid;
+}
+
+.search-form__pseudo-checkbox {
+  height: 19px;
+  width: 20px;
+  margin-right: 5px;
+  border: 1px white solid;
+  display: flex;
+  margin: 2px;
+}
+
+.search-form__checkbox:checked + span::before {
+  content: "";
+  height: 16px;
+  width: 16px;
+  display: inline-block;
+  margin: auto auto;
+  background-color: white;
+  padding: 1px;
+}
+
+.search-form__label:has(:focus-visible) {
+  outline: 1px white solid;
+}
+
+.search-form__label:hover {
+  text-decoration: underline;
+}
+
+/*------------------------*/
+
+.content__details {
+  min-height: 534px;
+  width: 399px;
+}
+
+.title {
+  font-family: Oswald;
+  font-size: 75px;
+  font-weight: 700;
+  line-height: 70px;
+  text-transform: uppercase;
+  height: 210px;
+  margin-bottom: 26px;
+}
+
+.content__accent {
+  color: #545050;
+}
+
+.content__list {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  height: 298px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.content__list::-webkit-scrollbar {
+  display: none;
+}
+
+.content__video-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.content__video-card-description-container {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+  padding-top: 2px;
+}
+
+.content__video-card-thumbnail {
+  width: 193px;
+  height: 103px;
+  object-fit: fill;
+}
+
+.content__card-link {
+  margin: 2px;
+  color: white;
+  text-decoration: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.content__card-link:focus {
+  outline: none;
+}
+
+.content__card-link:hover {
+  text-decoration: underline;
+}
+
+.content__card-link:focus-visible {
+  outline: 1px white solid;
+}
+
+.content__video-card-title {
+  font-family: Oswald;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.content__video-card-description {
+  line-height: 16.2px;
+  padding: 0 2px;
+}
+
+.content__card-link {
+  display: block;
+}
+
+.content__card-link_current {
+  background-color: rgba(84, 80, 80, 1);
 }
