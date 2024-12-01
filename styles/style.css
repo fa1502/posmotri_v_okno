@@ -97,6 +97,10 @@ ol {
   cursor: pointer;
 }
 
+.search-form__textfield::placeholder{
+  text-decoration: none;
+}
+
 .search-form__checkbox-list {
   display: flex;
   gap: 15px;
@@ -109,8 +113,9 @@ ol {
   cursor: pointer;
   background-color: transparent;
   color: white;
-  font-size: 18px;
+  font-family: 'Fira Sans Condensed';
   font-weight: 700;
+  font-size: 18px;
   line-height: 21.6px;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -151,6 +156,7 @@ input {
   line-height: 21.6px;
   color: rgba(255, 255, 255, 0.7);
   background-color: transparent;
+  text-decoration: none;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -158,11 +164,27 @@ input {
 
 input:focus {
   outline: none;
+
 }
+
 
 .search-form__label:has(:focus-visible) {
   outline: 1px white solid;
 }
+
+/*не пойму как убрать подчёркивание у placeholder, дайте, пожалуйста, подсказку*/
+
+.search-form__label:hover input::placeholder{
+  text-decoration: overline !important;
+  color: red;
+  border: none;
+}
+
+input:hover::placeholder {
+  text-decoration: overline !important;
+  border: none;
+}
+
 
 .search-form__pseudo-checkbox {
   height: 19px;
@@ -205,7 +227,7 @@ input:focus {
   line-height: 70px;
   text-transform: uppercase;
   height: 210px;
-  margin-bottom: 26px;
+  margin-bottom: 22px;
 }
 
 .content__accent {
@@ -216,7 +238,7 @@ input:focus {
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 26px;
   height: 298px;
   overflow-y: scroll;
   overflow-x: hidden;
@@ -233,6 +255,7 @@ input:focus {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  height: 107px;
 }
 
 .content__video-card-description-container {
@@ -244,8 +267,7 @@ input:focus {
 }
 
 .content__video-card-thumbnail {
-  width: 193px;
-  height: 103px;
+  width: 197px;
   object-fit: fill;
 }
 
