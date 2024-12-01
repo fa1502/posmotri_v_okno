@@ -132,6 +132,7 @@ button:hover {
 
 button:focus {
   outline: 1px white solid;
+  outline-offset: 2px;
 }
 
 .search-form__submit-button {
