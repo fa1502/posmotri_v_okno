@@ -1,4 +1,4 @@
-*,
+ *,
 *::before,
 *::after {
   box-sizing: border-box;
@@ -175,13 +175,13 @@ input:focus {
 /*не пойму как убрать подчёркивание у placeholder, дайте, пожалуйста, подсказку*/
 
 .search-form__label:hover input::placeholder{
-  text-decoration: overline !important;
+  text-decoration: none !important;
   color: red;
   border: none;
 }
 
 input:hover::placeholder {
-  text-decoration: overline !important;
+  text-decoration: none !important;
   border: none;
 }
 
