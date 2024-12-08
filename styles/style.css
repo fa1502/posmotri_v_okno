@@ -138,7 +138,7 @@ ol {
 
 .more-button {
   align-self: end;
-  width: 373px;
+  width: 100%;
   margin-bottom: 5px;
 }
 
@@ -224,6 +224,17 @@ ol {
   position: relative;
   height: 298px;
   overflow-y: auto;
+}
+
+
+.content__list::-webkit-scrollbar {
+  width: 1px;               /* ширина scrollbar */
+}
+.content__list::-webkit-scrollbar-track {
+  background: transparent;        /* цвет дорожки */
+}
+.content__list::-webkit-scrollbar-thumb {
+  background-color: black;    /* цвет плашки */
 }
 
 .content__list li:not(:last-child) {
